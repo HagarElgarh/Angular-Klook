@@ -14,6 +14,8 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./second-header.component.scss']
 })
 export class SecondHeaderComponent implements OnInit {
+  public isMenuCollapsed = true;
+
 
 
   @ViewChild('CatModal') Category: ElementRef | undefined;
@@ -89,6 +91,14 @@ export class SecondHeaderComponent implements OnInit {
   // hide() {
   //   $('#CatModal').modal('hide')
   // }
+
+  // goToActivites(catEvent?: MouseEvent, activityCat?: ICategory , collectionName?: string) {
+
+  //   console.log(activityCat, "activityCat goToActivites");
+
+  //   if(activityCat && activityCat !== undefined)
+  //   this.router.navigate(['/experiences/activities',{city : this.city , supCatName : this.subCatName ,activitesCategory: activityCat?.name }])
+  //   }
 
 
 }

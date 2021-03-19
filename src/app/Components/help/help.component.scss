@@ -1,5 +1,6 @@
 .firstPart {
   background-color: #fafafa;
+  padding-bottom: 2em;
 }
 
 // Start cover
@@ -43,7 +44,7 @@
   width: 80%;
   margin: auto;
   line-height: 2.5em;
-  height: 18em;
+  // height: 18em;
 }
 .faqs h1 {
   font-weight: 600;
@@ -134,7 +135,7 @@
     margin-left: 1em;
   }
   .faqs {
-    height: 20em;
+    // height: 20em;
     width: 90%;
   }
   .faqs .how a {
@@ -155,9 +156,7 @@
   .cover .search input {
     height: 2em;
   }
-  .faqs {
-    height: 28em;
-  }
+
   .faqs h1 {
     font-size: 1.5em;
   }
@@ -174,3 +173,13 @@
     font-size: 1.5em;
   }
 }
+
+.all:lang(ar) {
+  direction: rtl;
+}
+
+// @media only screen and (max-width: 350px) {
+.arrow {
+  display: none;
+}
+// }

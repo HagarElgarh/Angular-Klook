@@ -1,3 +1,7 @@
+.all {
+  display: contents;
+  margin-bottom: -1em;
+}
 .h3 {
   display: block;
   font-size: 2em;
@@ -39,7 +43,15 @@
 //  * {
 //   font-size: 14px;
 // }
-
+.more .card {
+  padding-right: 0em;
+  padding-left: 0em;
+}
+.fBtn,
+.sBtn,
+.thBtn {
+  text-align: center;
+}
 a:hover {
   text-decoration: none;
 }
@@ -48,7 +60,10 @@ a:hover {
   width: 100%;
   height: 33em;
 }
-
+.inspired .scCol .card {
+  width: 105% !important;
+  font-size: 14px;
+}
 /* text over carousel */
 .header-text {
   position: absolute;
@@ -188,6 +203,7 @@ a:hover {
   border-radius: 2em;
   margin-left: 2em;
   padding: 0.3em 0.5em 0.2em 0.5em;
+  margin-right: 1em;
 }
 .explore .brdr i {
   font-size: 0.8em;
@@ -489,6 +505,9 @@ a:hover {
 .ffCol .card {
   height: 22em;
 }
+.incred .inspired .card-title {
+  color: #212529;
+}
 .incred .inspired .scCol i,
 .thCol i,
 .frCol i,
@@ -511,42 +530,27 @@ a:hover {
   border-radius: 0.3em;
   position: relative;
 }
-.incred .inspired .ins_container .row {
+.incred .inspired .ins_container .row1 {
   margin: auto;
-  display: grid;
-  grid-template-columns: 19% 19% 19% 19% 19%;
+  // display: grid;
+  // grid-template-columns: 19% 78%;
   grid-gap: 0.7em;
 }
-.incred .inspired .ins_container .row .fsCol {
-  grid-column-start: 1;
-  grid-column-end: 2;
+.incred .inspired .ins_container .row1 .fsCol {
   color: white;
-  position: absolute;
-  bottom: 4em;
-  left: 2em;
-  width: 15%;
+  // position: absolute;
+  // bottom: 1em;
+  // left: 2em;
+  // width: 15%;
+  margin-top: 18em;
+  margin-left: 1em;
   font-size: 0.95em;
 }
-.incred .inspired .ins_container .row .scCol {
+.incred .inspired .ins_container .row2 .scCol {
   grid-column-start: 2;
   grid-column-end: 3;
-  margin-top: 2em;
 }
-.incred .inspired .ins_container .row .thCol {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  margin-top: 2em;
-}
-.incred .inspired .ins_container .row .frCol {
-  grid-column-start: 4;
-  grid-column-end: 5;
-  margin-top: 2em;
-}
-.incred .inspired .ins_container .row .ffCol {
-  grid-column-start: 5;
-  grid-column-end: 6;
-  margin-top: 2em;
-}
+
 .incred .inspired .ins_container .row {
   overflow: hidden;
   margin-top: 2em;
@@ -688,9 +692,10 @@ a:hover {
 .more .row1 {
   width: 100%;
   margin: auto;
-  height: 25em;
+  height: 30em;
   border-radius: 2em;
-  background-color: #ffdac4;
+  // background-color: #ffdac4;
+  // background-color: #d8d6d4;
   border-radius: 0.3em;
 }
 
@@ -1178,6 +1183,87 @@ span {
 
 //   /*End top cities to visit*/
 // }
+.blog {
+  margin-top: 8em !important;
+}
+.things .card {
+  width: 16rem;
+  height: 21em;
+  font-size: 14px;
+}
+@media only screen and (max-width: 1350px) {
+  .inspired .btns .btn1,
+  .btn2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .near_container {
+    height: 65em;
+  }
+  .near_container .card {
+    margin-top: 1em;
+  }
+  .inspired .btns .btn1,
+  .btn2 {
+    display: none;
+  }
+  .inspired .date {
+    font-size: 0.8em;
+  }
+  .inspired .review {
+    font-size: 0.7em !important;
+  }
+}
+@media only screen and (max-width: 1037px) {
+  .inspired .review {
+    display: none;
+  }
+  .inspired .rates {
+    display: none;
+  }
+  .inspired .fsCol {
+    margin-top: 15em !important;
+  }
+}
+@media only screen and (max-width: 1031px) {
+  .inspired .scCol .card {
+    height: 23em !important;
+  }
+  .explore {
+    width: 19em;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .more .card-title {
+    margin-top: 1em;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .more .card-img-overlay {
+    margin-top: 7.2em !important;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .things .card {
+    width: 12rem !important;
+  }
+  .inspired .fsCol {
+    margin-top: 13em !important;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .more .card-img-overlay {
+    margin-top: 6.2em !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .inspired .fsCol {
+    margin-top: 12em !important;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   body {
     height: 1000em;
@@ -1191,10 +1277,16 @@ span {
     text-align: center;
   }
   .header-text .text-center {
-    margin-left: 6em !important;
+    left: 50% !important;
+  }
+  .header-text {
+    top: 50% !important;
   }
   .result-count button {
     margin-left: 1.3em;
+  }
+  .fBtn {
+    text-align: center;
   }
   .text-center {
     position: absolute;
@@ -1256,7 +1348,7 @@ span {
   /*End after slider*/
   /*Start near to you*/
   .near_container {
-    height: 65em;
+    height: 68em;
     /* width: 80%; */
   }
   .near_container .h3 {
@@ -1275,12 +1367,12 @@ span {
   .near_container .view {
     padding-left: 3em;
     padding-right: 3em;
-    margin-left: 8em;
     margin-bottom: 3em;
   }
-  .firstview {
-    margin-top: 70em !important;
-  }
+
+  // .firstview {
+  //   margin-top: 60em !important;
+  // }
   /*End near to you*/
   /*Start incredible destinations*/
 
@@ -1312,11 +1404,12 @@ span {
     width: 8em;
     height: 16em;
   }
+  .sBtn {
+    text-align: center;
+  }
   .incred .view2 {
-    margin-top: 114em;
     padding-right: 1em;
     padding-left: 1em;
-    margin-left: 9em;
   }
   /*End incredible destinations*/
   /*Start things to do*/
@@ -1324,9 +1417,9 @@ span {
     margin-left: 1.2em;
   }
   .things .row {
-    margin-left: 4.2em;
+    // margin-left: 4.2em;
     margin-top: 2em;
-    width: 67.5em !important;
+    // width: 67.5em !important;
     // margin: auto;
   }
   .things .row .card {
@@ -1339,30 +1432,28 @@ span {
     padding-left: 5em;
     padding-right: 5em;
   }
+  .thBtn {
+    text-align: center;
+  }
   .things .view3 {
-    margin-top: 160em !important;
-    margin-left: 8em;
+    // margin-top: 150em !important;
+    // margin-left: 8em;
     padding-left: 1em;
     padding-right: 1em;
   }
 
-  // .things .owl-nav {
-  //   margin-right: 20em !important;
-  //   width: 50% !important;
-  //   margin: auto !important;
-  // }
-  // .things .owl-nav {
-  //   margin-right: 20em !important;
-  // }
   /*End things to do*/
   /*Start get inspired*/
   .incred .inspired .mleft {
     margin-left: 1.2em;
   }
-  .incred .inspired .ins_container .row .scCol,
-  .thCol {
-    display: none;
+  .incred .inspired .ins_container {
+    height: 54em;
   }
+  // .incred .inspired .ins_container .row .scCol,
+  // .thCol {
+  //   display: none;
+  // }
   .incred .inspired .ins_container .move {
     margin-left: -10em;
     width: 95% !important;
@@ -1377,6 +1468,14 @@ span {
   }
   .incred .inspired .ins_container .row .fsCol {
     bottom: 9em;
+  }
+  .incred .inspired .ins_container .row .scCol {
+    display: block;
+    // margin-left: 2em !important;
+  }
+  .incred .inspired .ins_container .row .scCol .card {
+    width: 100%;
+    margin-left: 0em !important;
   }
 
   /*End get inspired*/
@@ -1407,9 +1506,6 @@ span {
     margin-top: 2em;
     margin-left: 0.2em !important;
   }
-  // .more h3 {
-  //   margin-left: -1em;
-  // }
   .more .row1 .artc {
     font-size: 1.5em;
   }
@@ -1501,9 +1597,86 @@ span {
     margin-left: 0.4em;
     margin-right: 0.4em;
   }
+  .blog {
+    margin-top: 1em !important;
+  }
+  .more .card-img-overlay {
+    margin-top: 0.2em !important;
+  }
 
-  /*End top cities to visit*/
+  //   /*End top cities to visit*/
 }
+@media only screen and (max-width: 767px) {
+  .inspired .scCol .card {
+    display: none;
+  }
+  .ins_container {
+    height: 14em !important;
+  }
+  .recommend .images .row {
+    margin-left: 10em !important;
+  }
+  // .more .row1 {
+  //   // height: 10em !important;
+  //   display: none;
+  // }
+  // .more .row1 .grd {
+  //   display: grid;
+  //   grid-template-columns: 50% 50% !important;
+  // }
+  // .more .row1 .grd .img1 {
+  //   grid-column-start: 1;
+  //   grid-column-end: 2;
+  // }
+  // .more .row1 .grd .img2 {
+  //   grid-column-start: 2;
+  //   grid-column-end: 3;
+  // }
+  .more .row2 .card {
+    margin: auto;
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+  }
+  .more .row2 .card .card-title {
+    font-size: 1.2em;
+    font-weight: 500;
+    width: 28em;
+    padding-top: 10em;
+  }
+}
+@media only screen and (max-width: 705px) {
+  .near_container {
+    height: 114em;
+  }
+}
+@media only screen and (max-width: 635px) {
+  .more .row2 .card .card-title {
+    padding-top: 8em;
+  }
+}
+@media only screen and (max-width: 604px) {
+  .logos .eight {
+    display: none;
+  }
+}
+@media only screen and (max-width: 602px) {
+  .logos .five {
+    display: none;
+  }
+  .header-text .explore {
+    width: 10em !important;
+  }
+  .header .tex-center {
+    margin-left: 2em !important;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .header .tex-center {
+    left: 5% !important;
+    margin-left: 0em !important;
+  }
+}
+
 @media only screen and (max-width: 479px) {
   body {
     // width: 200%;
@@ -1514,8 +1687,14 @@ span {
   //   width: 113%;
   // }
   /*Start carousel*/
+  .header-text .text-center {
+    top: -5em !important;
+  }
   .header-text .explore {
     display: none;
+  }
+  .blog {
+    margin-top: 1em !important;
   }
 
   /*End carousel*/
@@ -1589,7 +1768,7 @@ span {
   /*End after slider*/
   /*Start near you*/
   .near_container {
-    height: 100em;
+    height: 106em;
   }
   .near_container .contain {
     margin-top: 1.2em;
@@ -1613,10 +1792,10 @@ span {
     padding-left: 1em;
     font-size: 1em;
   }
-  .near_container .firstview {
-    margin-top: 150em !important;
-    margin-left: 5em !important;
-  }
+  // .near_container .firstview {
+  //   // margin-top: 125em !important;
+  //   // margin-left: 5em !important;
+  // }
   /*End near you*/
   /*Start incredible destinations*/
 
@@ -1637,10 +1816,10 @@ span {
     margin-left: -1em;
   }
   .view2 {
-    margin-top: 161em !important;
+    // margin-top: 143em !important;
     font-size: 0.8em;
     width: 15em;
-    margin-left: 4em !important;
+    // margin-left: 4em !important;
     margin-bottom: 2em;
   }
 
@@ -1670,11 +1849,22 @@ span {
   // }
 
   .things .view3 {
-    margin-top: 240em !important;
+    // margin-top: 215em !important;
     padding-left: 1em !important;
     padding-right: 1em !important;
     font-size: 1em;
-    margin-left: 4em !important;
+    // margin-left: 4em !important;
+  }
+  .recommend .images {
+    margin-left: -5em;
+  }
+  .more .card {
+    margin-left: 0em !important;
+    margin-bottom: 0em !important;
+    height: 18em !important;
+  }
+  .more .card .card-title {
+    padding-top: 6em !important;
   }
 
   /*End top things to do */
@@ -1694,7 +1884,8 @@ span {
   }
   .incred .inspired .ins_container .row .fsCol {
     width: 70%;
-    bottom: 1.7em;
+    margin-top: 8.5em !important;
+    margin: auto;
   }
   .incred .inspired .ins_container .row .fsCol .h4 {
     font-size: 1.2em;
@@ -1756,4 +1947,59 @@ span {
   }
 
   /*Start top cities to visit*/
+}
+/*Start translation*/
+*:lang(ar) {
+  text-align: right;
+}
+
+// *:lang(ar) {
+//   direction: rtl;
+// }
+#title:lang(ar),
+#titleDiscover:lang(ar) {
+  display: block !important;
+  margin: auto !important;
+  text-align: center;
+}
+#search:lang(ar) {
+  text-align: center;
+}
+.searchBtn:lang(ar) {
+  text-align: center !important;
+}
+.brdr i:lang(ar) {
+  text-align: center;
+}
+// .afterSlider:lang(ar) {
+//   text-align: right;
+// }
+.near_container .contain h3:lang(ar) {
+  text-align: right !important;
+}
+.things .contain .h3:lang(ar) {
+  text-align: right !important;
+}
+.inspired .h3:lang(ar) {
+  margin-right: 2.5em;
+}
+.recommend .contain:lang(ar) {
+  margin-right: 5em;
+}
+.near_container:lang(ar) {
+  direction: rtl;
+}
+.near_container #cards:lang(ar) {
+  width: 92%;
+  margin: auto;
+}
+.things .contain:lang(ar) {
+  direction: rtl !important;
+  width: 88%;
+  margin: auto;
+}
+.fBtn:lang(ar),
+.sBtn:lang(ar),
+.thBtn:lang(ar) {
+  text-align: center;
 }
